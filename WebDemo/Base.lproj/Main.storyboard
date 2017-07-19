@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlu-o8-bcb">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="3t5-iF-ccR"/>
+                                    <constraint firstAttribute="height" constant="440" id="9U1-l0-gWx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ckS-HH-gVd"/>
+                                </connections>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是标签呵呵哒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUx-fi-hKm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1ol-Lh-tOi"/>
+                                    <constraint firstAttribute="width" constant="375" id="ULs-bQ-kV4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDG-1A-Qdw">
+                                <frame key="frameInset" minY="528" width="375" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="这是按钮呵呵哒"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mzb-gA-5uh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pUx-fi-hKm" firstAttribute="top" secondItem="Dlu-o8-bcb" secondAttribute="bottom" id="3O6-qZ-TAk"/>
+                            <constraint firstItem="pUx-fi-hKm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5CS-de-VEz"/>
+                            <constraint firstAttribute="trailing" secondItem="Dlu-o8-bcb" secondAttribute="trailing" id="Czb-gp-OOx"/>
+                            <constraint firstItem="Dlu-o8-bcb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DNN-7J-7e6"/>
+                            <constraint firstAttribute="trailing" secondItem="pUx-fi-hKm" secondAttribute="trailing" id="G3t-LX-ByS"/>
+                            <constraint firstItem="Dlu-o8-bcb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jnm-ZF-uI8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="pUx-fi-hKm" id="PO2-nc-ia7"/>
+                        <outlet property="webView" destination="Dlu-o8-bcb" id="AbD-5h-JzQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
